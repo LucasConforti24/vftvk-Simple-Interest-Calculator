@@ -14,6 +14,7 @@ function compute()
     else
     {
         alert("Did you entered a positive number?");
+        p.focus();
     }
     
 }
