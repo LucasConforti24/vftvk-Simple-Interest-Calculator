@@ -6,9 +6,16 @@ function compute()
     var years = document.getElementById("years").value;
     var interest = p * years * rate /100;
     var year= new Date().getFullYear()+parseInt(years);
-    document.getElementById("result").innerText="If you deposit "+ p + ", \
-    <br\>at an interest rate of "+ rate + ". %\<br\> You will recieve an amount of "+ interest +" in the year "+ year +".";
-
+    if(p > 0)
+    {
+        document.getElementById("result").innerText="If you deposit "+ p + ", \
+        <br\>at an interest rate of "+ rate + ". %\<br\> You will recieve an amount of "+ interest +" in the year "+ year +".";
+    }
+    else
+    {
+        alert("Did you entered a positive number?");
+    }
+    
 }
 
 function updateRate()
